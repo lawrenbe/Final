@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<div id="main"><!-- open main div -->
+    <div id="header"><!-- open header div -->
+        <h1>JavaScript Quiz</h1>
+    </div><!-- close header div -->
+
+    <h1>JavaScript Quiz</h1>
+    <form  id="form1" action=" ">
+        <p>What is the name of this building?</p>
+        <input type="radio" name="variable" value="1" />Wilkinson Hall<br />
+        <input type="radio" name="variable" value="0" />Roger Hall<br />
+        <input type="radio" name="variable" value="0" />Dryden Hall<br />
+        <input type="radio" name="variable" value="0" />Bexel Hall<br />
+        <input type="radio" name="variable" value="0" />Ballard Hall<br />
+
+        <input type="submit" value="Submit">
+    </form>
+    <p>Your grade is: <span id="grade">__</span></p>
+</div><!-- close main div -->
+</body>
+
+</div><!-- close main div -->
+<script>
+    document.getElementById("form1").onsubmit=function() {
+        variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+
+        result = variable;
+
+        document.getElementById("grade").innerHTML = result;
+        if ("value" == 1) {result2 = "Correct!"};
+        if ("value" == 0) {result2 = "That is incorrect."};
+
+
+
+        return false; // required to not refresh the page; just leave this here
+    } //this ends the submit function
+
+</script>
+</body>
+</html>
